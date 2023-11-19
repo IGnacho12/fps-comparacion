@@ -1,0 +1,56 @@
+/* --- --- --- --- Estilos generales --- --- --- --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Cascadia Code";
+  padding: 100px 200px;
+}
+
+/* --- --- --- --- Imágenes --- --- --- --- */
+
+img {
+  height: 150px;
+  width: 150px;
+  transition: .2s;
+  border-radius: 50%;
+  animation: fps-60 1.5s /* steps(xyz) */  infinite alternate both;
+}
+
+.img-120-fps {
+  animation-timing-function: steps(120);
+}
+
+.img-60-fps {
+  animation-timing-function: steps(60);
+}
+
+.img-30-fps {
+  animation-timing-function: steps(30);
+}
+
+.img-10-fps {
+  animation-timing-function: steps(10);
+}
+
+.fps {
+  display: flex;
+  flex-direction: column;
+}
+
+img:hover {
+  box-shadow: 0 0 30px white;
+}
+
+
+/* --- --- --- --- Animaciones --- --- --- --- */
+@keyframes fps-60 {
+  /* En este caso no es necesario agregar el "from { }*/
+  to {
+    transform: translateX(1200px);
+  }
+}
+
